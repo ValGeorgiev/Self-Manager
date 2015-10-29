@@ -1,0 +1,2 @@
+# Self-Manager
+SPA app 
