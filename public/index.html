@@ -5,10 +5,28 @@
     <title>Self manager</title>
     <link rel='icon' type="image/ico" href="manager.ico">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/toastr/toastr.css"/>
 </head>
 <body>
-<div id="content">
+<div id="root" class="container">
+    <header>
+        <div class="row">
+            <h1 class="page-header col-md-9">Self Manager</h1>
+            <div class="col-md-3">
+                <a href="#/register">Register or Login</a>
+            </div>
+        </div>
+        <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav">
+                <li><a href="#/home">Home</a></li>
+                <li><a href="#/todos">My TODOs</a></li>
+                <li><a href="#/events">My Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content">
 
+    </div>
 </div>
 
 <!-- libs -->
@@ -16,6 +34,7 @@
 <script src="bower_components/sammy/lib/sammy.js"></script>
 <script src="bower_components/handlebars/handlebars.js"></script>
 <script src="bower_components/sha1/index.js"></script>
+<script src="bower_components/toastr/toastr.js"> </script>
 
 <!-- App -->
 

@@ -19,6 +19,17 @@ var userController = function(){
                             console.log("User register");
                         });
                 });
+                $('#btn-login').on('click',function(){
+                    var user = {
+                        username: $('#tb-username').val(),
+                        password: $('#tb-pass').val()
+                    };
+                    data.users.login(user)
+                        .then(function(){
+                            toastr.success('User logged in');
+                            context.redirect('#/');
+                        });
+                });
             });
 
 

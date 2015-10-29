@@ -2,7 +2,10 @@
 
     var sammyApp = Sammy('#content', function(){
 
-        this.get('#/', homeController.all);
+        this.get('#/', function(){
+            this.redirect('#/home')
+        });
+        this.get('#/home', homeController.all);
         this.get('#/login', userController.login);
         this.get('#/register', userController.register);
 
