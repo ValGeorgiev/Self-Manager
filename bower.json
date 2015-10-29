@@ -19,6 +19,8 @@
   "dependencies": {
     "sammy": "~0.7.6",
     "jquery": "~2.1.4",
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "handlebars": "~4.0.4",
+    "systemjs": "*"
   }
 }
