@@ -73,13 +73,63 @@ var data = function(){
         return promise;
     }
 
+
+    function todosAdd(todo){
+        var promise = new Promise(function(resolve, reject){
+            var url = 'api/todos';
+            $.ajax(url,{
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(todo),
+                headers:{
+                    'x-auth-key':localStorage.getItem(STORAGE_AUTH_KEY)
+                },
+                success: function(res){
+                    resolve(res);
+                },
+                error: function(err){
+                    reject(err);
+                }
+            });
+        });
+        return promise;
+    }
+
+
+    // Categories
+    function categoriesGet(){
+        var promise = new Promise(function(resolve, reject){
+            var url = 'api/categories';
+
+            $.ajax(url, {
+                method: 'GET',
+                contentType: 'application/json',
+                headers:{
+                    'x-auth-key': localStorage.getItem(STORAGE_AUTH_KEY)
+                },
+                success:function(res){
+                    resolve(res);
+                },
+                error:function(err){
+                    reject(err);
+                }
+            });
+        });
+        return promise;
+    }
+
+
     return{
         users: {
             register: register,
             login : login
         },
         todos:{
-            get: todosGet
+            get: todosGet,
+            add: todosAdd
+        },
+        categories:{
+            get: categoriesGet
         }
     };
 

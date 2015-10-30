@@ -18,5 +18,18 @@
 
     $(function(){
         sammyApp.run('#/');
+
+
+        $.ajax('api/categories', {
+            method: 'GET',
+            contentType: 'application/json',
+            headers: {
+                'x-auth-key': localStorage.getItem('SPECIAL-AUTHENTICATION-KEY')
+            },
+            success:function(categories){
+                toastr.info(JSON.stringify(categories));
+            }
+
+        })
     })
 }());

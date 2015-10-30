@@ -5,7 +5,33 @@
       "passhash": "f7c3bc1d808e04732adf679965ccc34ca7ae3441",
       "usernameLower": "valentin",
       "authKey": "undefinedY%EUypMp-)Trnl-#uqA(liyOu=H#WhihnZuCT+bsQwqoIwRZTMg",
-      "id": "48b9a71c-46d4-4beb-abd3-60053ff4fb34"
+      "id": "48b9a71c-46d4-4beb-abd3-60053ff4fb34",
+      "todos": [
+        {
+          "id": 301125,
+          "text": "Play football",
+          "state": true,
+          "category": "Fun"
+        },
+        {
+          "id": 92066,
+          "text": "I m cool",
+          "state": false,
+          "category": "Cool stuff"
+        },
+        {
+          "id": 109860,
+          "text": "Be motivated",
+          "state": false,
+          "category": "Motivation"
+        },
+        {
+          "id": 121940,
+          "text": "Fitness",
+          "state": false,
+          "category": "Sport"
+        }
+      ]
     }
   ]
 }
