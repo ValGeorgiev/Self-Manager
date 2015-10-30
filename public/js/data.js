@@ -95,6 +95,26 @@ var data = function(){
         return promise;
     }
 
+    function todosUpdate(id, state){
+        var promise = new Promise(function(resolve, reject){
+            var url = 'api/todos/' + id;
+            $.ajax(url,{
+                method: 'PUT',
+                contentType: 'application/json',
+                data: JSON.stringify({state: state}),
+                headers:{
+                    'x-auth-key':localStorage.getItem(STORAGE_AUTH_KEY)
+                },
+                success: function(res){
+                    resolve(res);
+                },
+                error: function(err){
+                    reject(err);
+                }
+            });
+        });
+        return promise;
+    }
 
     // Categories
     function categoriesGet(){
@@ -126,7 +146,8 @@ var data = function(){
         },
         todos:{
             get: todosGet,
-            add: todosAdd
+            add: todosAdd,
+            update: todosUpdate
         },
         categories:{
             get: categoriesGet

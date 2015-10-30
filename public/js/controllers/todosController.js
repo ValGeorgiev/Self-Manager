@@ -1,6 +1,10 @@
 var todosController = function(){
 
     function all(context){
+        var category = context.params.category;
+        if(category){
+            category = category.toLowerCase();
+        }
         var todos;
         data.todos.get()
             .then(function(resTodos){
@@ -9,7 +13,29 @@ var todosController = function(){
                 return templates.get('todos');
             })
             .then(function(template){
-               context.$element().html(template(todos));
+               var groups = _.chain(todos)
+                    .groupBy('category')
+                    .map(function(todos, categoryName){
+                        return{
+                            category: categoryName,
+                            todos: todos
+                        };
+                    })
+                   .filter(function(group){
+                        return !category || group.category.toLowerCase() === category;
+                   })
+                    .value();
+
+               context.$element().html(template(groups));
+                $('.todo-state').on('change', function(){
+                    var id = $(this).parents('.todo-item').attr('data-id');
+                    var state = !!$(this).prop('checked');
+
+                    data.todos.update(id, state)
+                        .then(function(){
+                            toastr.success('State updated');
+                        });
+                });
             });
     }
     function add(context){
