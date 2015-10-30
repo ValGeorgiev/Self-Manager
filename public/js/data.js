@@ -1,5 +1,9 @@
 var data = function(){
 
+    const STORAGE_AUTH_KEY = 'SPECIAL-AUTHENTICATION-KEY';
+
+
+    // Users
     function register(user){
         var promise = new Promise(function(resolve, reject){
             var url = 'api/users';
@@ -35,6 +39,7 @@ var data = function(){
                 contentType: 'application/json',
                 data: JSON.stringify(reqUser),
                 success: function(res){
+                    localStorage.setItem(STORAGE_AUTH_KEY, res.result.authKey);
                     resolve(res);
                 }
             });
@@ -43,11 +48,42 @@ var data = function(){
     }
 
 
+
+
+    // TODOs
+
+    function todosGet(){
+        var promise = new Promise(function(resolve, reject){
+            var url = 'api/todos';
+
+            $.ajax(url, {
+               method: 'GET',
+                contentType: 'application/json',
+                headers:{
+                    'x-auth-key': localStorage.getItem(STORAGE_AUTH_KEY)
+                },
+                success:function(res){
+                    resolve(res);
+                },
+                error:function(err){
+                    reject(err);
+                }
+            });
+        });
+        return promise;
+    }
+
     return{
         users: {
             register: register,
             login : login
+        },
+        todos:{
+            get: todosGet
         }
     };
+
+
+
 
 }();

@@ -9,9 +9,9 @@
         this.get('#/login', userController.login);
         this.get('#/register', userController.register);
 
-        //this.get('#/todos', todosController.all);
-        //
-        //this.get('#/todos/add', todosController.add );
+        this.get('#/todos', todosController.all);
+
+        this.get('#/todos/add', todosController.add );
 
     });
 
