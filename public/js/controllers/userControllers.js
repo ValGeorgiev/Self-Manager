@@ -1,7 +1,23 @@
 var userController = function(){
 
     function login(context){
+        templates.get('login')
+            .then(function(template){
+                context.$element().html(template());
 
+                //attach events
+                $('#btn-login').on('click',function(){
+                    var user = {
+                        username: $('#tb-username-login').val(),
+                        password: $('#tb-pass-login').val()
+                    };
+                    data.users.login(user)
+                        .then(function(){
+                            toastr.success('User logged in');
+                            context.redirect('#/todos');
+                        });
+                });
+            });
     }
     function register(context){
         templates.get('register')
@@ -16,23 +32,11 @@ var userController = function(){
                     };
                     data.users.register(user)
                         .then(function(){
-                            console.log("User register");
-                        });
-                });
-                $('#btn-login').on('click',function(){
-                    var user = {
-                        username: $('#tb-username').val(),
-                        password: $('#tb-pass').val()
-                    };
-                    data.users.login(user)
-                        .then(function(){
-                            toastr.success('User logged in');
-                            context.redirect('#/');
+                            toastr.success('User register');
+                            context.redirect('#/todos');
                         });
                 });
             });
-
-
     }
 
     return{

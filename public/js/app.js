@@ -29,7 +29,7 @@
                 'x-auth-key': localStorage.getItem('SPECIAL-AUTHENTICATION-KEY')
             },
             success:function(categories){
-                toastr.info(JSON.stringify(categories));
+
             }
 
         })

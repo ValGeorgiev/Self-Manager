@@ -40,17 +40,47 @@
       ],
       "events": [
         {
-          "id": 46790,
-          "title": "Play game",
-          "category": "Football",
-          "description": "PLayy",
-          "date": "2015-10-31T00:30:00.000Z",
+          "id": 910638,
+          "title": "Why",
+          "category": "wtg",
+          "description": "123",
+          "date": "2015-11-01T11:00:00.000Z",
+          "creatorId": "48b9a71c-46d4-4beb-abd3-60053ff4fb34",
+          "users": [
+            "48b9a71c-46d4-4beb-abd3-60053ff4fb34"
+          ]
+        },
+        {
+          "id": 830887,
+          "title": "HAide de",
+          "category": "haide",
+          "description": "come on",
+          "date": "2015-11-14T00:00:00.000Z",
+          "creatorId": "48b9a71c-46d4-4beb-abd3-60053ff4fb34",
+          "users": [
+            "48b9a71c-46d4-4beb-abd3-60053ff4fb34"
+          ]
+        },
+        {
+          "id": 632942,
+          "title": "be",
+          "category": "be",
+          "description": "bebe",
+          "date": "2015-11-27T11:00:00.000Z",
           "creatorId": "48b9a71c-46d4-4beb-abd3-60053ff4fb34",
           "users": [
             "48b9a71c-46d4-4beb-abd3-60053ff4fb34"
           ]
         }
       ]
+    },
+    {
+      "username": "Ivan",
+      "passhash": "40bd001563085fc35165329ea1ff5c5ecbdbbeef",
+      "usernameLower": "ivan",
+      "authKey": "undefinedfeoJQopYZ=OnsVTfxFsBn(s_WpzOQZodmRP_^l=l-(PYWbwI^JL",
+      "id": "5f0e9002-9804-4741-9f70-ea93eeb66f7a",
+      "events": []
     }
   ]
 }

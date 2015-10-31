@@ -33,7 +33,7 @@ var todosController = function(){
 
                     data.todos.update(id, state)
                         .then(function(){
-                            toastr.success('State updated');
+
                         });
                 });
             });
