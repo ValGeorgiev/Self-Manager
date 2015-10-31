@@ -137,6 +137,50 @@ var data = function(){
         });
         return promise;
     }
+    //Events
+
+    function eventsGet(){
+        var promise = new Promise(function(resolve, reject){
+            var url = 'api/events';
+
+            $.ajax(url, {
+                method: 'GET',
+                contentType: 'application/json',
+                headers:{
+                    'x-auth-key': localStorage.getItem(STORAGE_AUTH_KEY)
+                },
+                success:function(res){
+                    resolve(res);
+                },
+                error:function(err){
+                    reject(err);
+                }
+            });
+        });
+        return promise;
+    }
+
+
+    function eventsAdd(event){
+        var promise = new Promise(function(resolve, reject){
+            var url = 'api/events';
+            $.ajax(url,{
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(event),
+                headers:{
+                    'x-auth-key':localStorage.getItem(STORAGE_AUTH_KEY)
+                },
+                success: function(res){
+                    resolve(res);
+                },
+                error: function(err){
+                    reject(err);
+                }
+            });
+        });
+        return promise;
+    }
 
 
     return{
@@ -151,6 +195,10 @@ var data = function(){
         },
         categories:{
             get: categoriesGet
+        },
+        events:{
+            get: eventsGet,
+            add: eventsAdd
         }
     };
 

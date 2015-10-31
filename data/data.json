@@ -16,7 +16,7 @@
         {
           "id": 92066,
           "text": "I m cool",
-          "state": true,
+          "state": false,
           "category": "Cool stuff"
         },
         {
@@ -30,6 +30,25 @@
           "text": "Fitness",
           "state": false,
           "category": "Sport"
+        },
+        {
+          "id": 95989,
+          "text": "dada",
+          "state": false,
+          "category": "dada"
+        }
+      ],
+      "events": [
+        {
+          "id": 46790,
+          "title": "Play game",
+          "category": "Football",
+          "description": "PLayy",
+          "date": "2015-10-31T00:30:00.000Z",
+          "creatorId": "48b9a71c-46d4-4beb-abd3-60053ff4fb34",
+          "users": [
+            "48b9a71c-46d4-4beb-abd3-60053ff4fb34"
+          ]
         }
       ]
     }
