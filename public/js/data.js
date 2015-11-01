@@ -41,6 +41,11 @@ var data = function(){
                 success: function(res){
                     localStorage.setItem(STORAGE_AUTH_KEY, res.result.authKey);
                     resolve(res);
+                },
+                error: function(err){
+                    toastr.error("This user don't exist!");
+                    reject(err);
+
                 }
             });
         });

@@ -9,7 +9,6 @@ var todosController = function(){
         data.todos.get()
             .then(function(resTodos){
                todos = resTodos.result;
-                console.log(todos);
                 return templates.get('todos');
             })
             .then(function(template){
