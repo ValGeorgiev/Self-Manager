@@ -23,26 +23,30 @@
 </div>
 
 <a href="#/todos/add">Add new TODO</a>
+
+<div class="container">
 {{#if this }}
 
-        {{#each this}}
+    {{#each this}}
         <h3><a href="#/todos?category={{category}}">{{category}}</a></h3>
-        <ul>
-            {{#each todos}}
-            <li class="todo-item" data-id="{{id}}">
-                <label>
-                    {{#if state}}
-                    <input class="todo-state" type="checkbox" checked/>
-                {{else}}
-                    <input class="todo-state" type="checkbox" />
-                {{/if}}
-                    {{text}}
-                </label>
-            </li>
-            {{/each}}
-        </ul>
-        {{/each}}
 
+        {{#each todos}}
+            <div class="row">
+
+                <div class="col-sm-11 todo-item" data-id="{{id}}">
+                    <label>
+                        {{#if state}}
+                            <input class="todo-state" type="checkbox" checked/>
+                        {{else}}
+                            <input class="todo-state" type="checkbox" />
+                        {{/if}}
+                        <span>{{text}}</span>
+                    </label>
+                </div>
+            </div>
+        {{/each}}
+    {{/each}}
 {{else}}
     <h3>No TODOs</h3>
 {{/if}}
+</div>

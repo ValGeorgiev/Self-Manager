@@ -1,3 +1,92 @@
 {
-  "users": [ ]
+  "users": [
+    {
+      "username": "val",
+      "passhash": "40bd001563085fc35165329ea1ff5c5ecbdbbeef",
+      "usernameLower": "val",
+      "authKey": "undefinedLTJRfIftEpO_kUZsvtJt(QJ#CivxC^xcpFv##u#G$AWhuRX#ow-",
+      "id": "7266947e-4c31-4292-a2e6-71704450e329",
+      "todos": [
+        {
+          "id": 27236,
+          "text": "adsad",
+          "state": false,
+          "category": "asda"
+        }
+      ]
+    },
+    {
+      "username": "Valio",
+      "passhash": "40bd001563085fc35165329ea1ff5c5ecbdbbeef",
+      "usernameLower": "valio",
+      "authKey": "undefinedpUncwymGXO)FNSFPe&^@p!#Uv)vfzzhhR)v(W(_qAXmRYZVT+jd",
+      "id": "dcd43ee0-d0ec-41c8-a2f1-2ef5d19f4e43",
+      "todos": [
+        {
+          "id": 363253,
+          "text": "I must learn NodeJs",
+          "state": false,
+          "category": "Learning"
+        },
+        {
+          "id": 381925,
+          "text": "I must learn DB",
+          "state": false,
+          "category": "Learning"
+        },
+        {
+          "id": 404395,
+          "text": "I will play football tomorow",
+          "state": false,
+          "category": "Sport"
+        }
+      ],
+      "events": [
+        {
+          "id": 458675,
+          "title": "Date",
+          "category": "Dates",
+          "description": "Date with Elena in Fantastico",
+          "date": "2015-11-04T07:00:00.000Z",
+          "creatorId": "dcd43ee0-d0ec-41c8-a2f1-2ef5d19f4e43",
+          "users": [
+            "dcd43ee0-d0ec-41c8-a2f1-2ef5d19f4e43"
+          ]
+        },
+        {
+          "id": 504052,
+          "title": "Second date",
+          "category": "Dates",
+          "description": "Second date with Elena in Kaufland",
+          "date": "2015-11-05T00:30:00.000Z",
+          "creatorId": "dcd43ee0-d0ec-41c8-a2f1-2ef5d19f4e43",
+          "users": [
+            "dcd43ee0-d0ec-41c8-a2f1-2ef5d19f4e43"
+          ]
+        },
+        {
+          "id": 560385,
+          "title": "Go to work",
+          "category": "Work",
+          "description": "Go to work idiot",
+          "date": "2015-11-05T06:00:00.000Z",
+          "creatorId": "dcd43ee0-d0ec-41c8-a2f1-2ef5d19f4e43",
+          "users": [
+            "dcd43ee0-d0ec-41c8-a2f1-2ef5d19f4e43"
+          ]
+        },
+        {
+          "id": 543452,
+          "title": "Go to Telerik",
+          "category": "Courses",
+          "description": "Go to End-To-End Node js lecture",
+          "date": "2015-11-07T07:00:00.000Z",
+          "creatorId": "dcd43ee0-d0ec-41c8-a2f1-2ef5d19f4e43",
+          "users": [
+            "dcd43ee0-d0ec-41c8-a2f1-2ef5d19f4e43"
+          ]
+        }
+      ]
+    }
+  ]
 }

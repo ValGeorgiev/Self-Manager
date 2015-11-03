@@ -18,6 +18,7 @@ var data = function(){
                 contentType: 'application/json',
                 data: JSON.stringify(reqUser),
                 success: function(res){
+                    localStorage.setItem(STORAGE_AUTH_KEY, res.result.authKey);
                     resolve(res);
                 }
             });

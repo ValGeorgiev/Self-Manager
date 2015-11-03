@@ -22,20 +22,31 @@
     </div>
 </div>
 <a href="#/events/add">Add new Event</a>
+<div class="container">
+
 {{#if this }}
     {{#each this}}
-        <h3><a href="#/events?category={{category}}">{{category}}</a></h3>
-        <ul>
+        <h3><a href="#/events?category={{category}}" class="event-category">{{category}}</a></h3>
             {{#each events}}
-                <li class="event-item" data-id="{{id}}">
-                    <label>
-                        {{title}}
-                    </label>
-                </li>
+            <div class="row">
+                <div class="col-sm-2">
+                    <h4 class="event-title" data-id="{{id}}"> {{title}} </h4>
+                </div>
+                <div class="col-sm-6">
+                    <p class="event-description" data-id="{{id}}"> {{description}}</p>
+                </div>
+                <div class="col-sm-4">
+                    <span class="event-date" data-id="{{id}}"> {{date}} </span>
+                </div>
+            </div>
             {{/each}}
-        </ul>
     {{/each}}
 
 {{else}}
-    <h3>No Events</h3>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>No Events!</h3>
+        </div>
+    </div>
 {{/if}}
+</div>

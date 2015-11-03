@@ -5,6 +5,7 @@ var userController = function(){
             .then(function(template){
                 context.$element().html(template());
 
+                $('#tb-pass-login').keypress(enterTriggerLogin);
                 //attach events
                 $('#btn-login').on('click',function(){
                     var user = {
@@ -23,11 +24,20 @@ var userController = function(){
         templates.get('register')
             .then(function(template){
                 context.$element().html(template());
+                var confirmPass = $("#tb-pass-check");
+                confirmPass.keyup(validateRegisterPasswords);
+
+                confirmPass.keypress(enterTriggerRegister);
 
                 //attach events
                 $('#btn-register').on('click',function(){
+                    var usernameReg = $("#tb-username").val();
+                    if(usernameReg == ''){
+                        toastr.error("Username is empty!!!");
+                        return;
+                    }
                     var user = {
-                        username: $('#tb-username').val(),
+                        username: usernameReg,
                         password: $('#tb-pass').val()
                     };
                     data.users.register(user)
