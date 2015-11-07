@@ -8,22 +8,32 @@
     <link rel="stylesheet" href="bower_components/toastr/toastr.css"/>
     <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/jquery-ui.css"/>
     <link rel="stylesheet" href="bower_components/jt.timepicker/jquery.timepicker.css"/>
+    <link rel="stylesheet" href="styles/index.css"/>
+    <link rel="stylesheet" href="styles/todos.css"/>
 </head>
 <body>
 <div id="root" class="container">
-    <header>
-        <div class="row">
-            <h1 class="page-header col-md-9"><a href="#/home">Self Manager</a></h1>
+
+        <div class="row" >
+            <div id="banner" class="col-sm-12">
+                <h1 class="page-header"><a href="#/home" id="selfManager">Self Manager</a></h1>
+            </div>
         </div>
-    </header>
+</div>
+
     <div id="content">
 
     </div>
+<div class="container">
     <footer>
         <div class="row">
             <div class="col-md-12">
                 <hr/>
-                <a href="https://github.com/ValentinAlexandrovGeorgiev/Self-Manager">GitHub</a>
+                <a href="https://github.com/ValentinAlexandrovGeorgiev/Self-Manager">
+                    <img  id="footer" src="img/github-mark@1200x630.png" alt="GitHub"/>
+                    <br/>
+                    <span id="showGitHub">GitHub</span>
+                </a>
             </div>
         </div>
     </footer>
@@ -31,6 +41,7 @@
 
 <!-- libs -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/sammy/lib/sammy.js"></script>
 <script src="bower_components/handlebars/handlebars.js"></script>
 <script src="bower_components/sha1/index.js"></script>
@@ -52,6 +63,7 @@
 <script src="js/app.js"></script>
 <script src="js/data.js"></script>
 <script src="js/validation-register.js"></script>
+<script src="js/index.js"></script>
 
 </body>
 </html>

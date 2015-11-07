@@ -1,0 +1,31 @@
+.page-header{
+    font-size: 40px;
+}
+#banner{
+    background-color: #95AB63;
+    margin-left: 0;
+    border: 1px solid black;
+}
+#selfManager{
+    text-decoration: none;
+    color: #545454;
+}
+#footer{
+    width: 70px;
+    height: 35px;
+}
+
+
+#showGitHub{
+    display: none;
+    text-decoration: none;
+    margin-left: 12px;
+    padding-right: 1px;
+    padding-left: 1px;
+    background-color: #323222;
+    color: #f4f0f2;
+
+}
+a:hover{
+    text-decoration: none;
+}

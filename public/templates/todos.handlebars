@@ -1,52 +1,59 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <h2>TODOs</h2>
+        <div class="col-sm-12">
+            <h2 id="todos-header">TODOs</h2>
         </div>
     </div>
-    <div class="row">
-
-            <nav class="navbar navbar-default">
-                <div class="col-md-11">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#/todos">My TODOs</a></li>
-                        <li><a href="#/events">My Events</a></li>
-                    </ul>
+    <div  class="row">
+        <div id="navbarTodo" class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-10">
+                    <button id="myTodo"><a href="#/todos">My TODOs</a></button>
+                    <button id="myEvents"><a href="#/events">My Events</a></button>
                 </div>
-
-                <div class="col-md-1">
-                    <a id="logOut" href="#/login">Log Out</a>
+                <div class="col-sm-2">
+                    <button id="logOut"><a href="#/login">Log Out</a></button>
                 </div>
-            </nav>
-
+            </div>
+        </div>
     </div>
 </div>
 
-<a href="#/todos/add">Add new TODO</a>
+
 
 <div class="container">
-{{#if this }}
+    <div class="row">
+        <div class="col-sm-12">
+            <button id="buttonAddTodo"><a id="linkAddTodo" href="#/todos/add">Add</a></button>
+        </div>
+    </div>
 
-    {{#each this}}
-        <h3><a href="#/todos?category={{category}}">{{category}}</a></h3>
 
-        {{#each todos}}
+    {{#if this }}
+
+        {{#each this}}
             <div class="row">
-
-                <div class="col-sm-11 todo-item" data-id="{{id}}">
-                    <label>
-                        {{#if state}}
-                            <input class="todo-state" type="checkbox" checked/>
-                        {{else}}
-                            <input class="todo-state" type="checkbox" />
-                        {{/if}}
-                        <span>{{text}}</span>
-                    </label>
+                <div class="col-sm-12">
+                    <button id="categoryId"><a href="#/todos?category={{category}}">{{category}}</a></button>
                 </div>
             </div>
+            {{#each todos}}
+                <div class="row">
+                    <div class="col-sm-1">      </div>
+                    <div class="col-sm-11 todo-item" data-id="{{id}}">
+                        <label>
+                            {{#if state}}
+                                <input class="todo-state" type="checkbox" checked/>
+                            {{else}}
+                                <input class="todo-state" type="checkbox" />
+                            {{/if}}
+                            <div id="todo">{{text}}</div>
+                        </label>
+                    </div>
+                </div>
+            {{/each}}
         {{/each}}
-    {{/each}}
-{{else}}
-    <h3>No TODOs</h3>
-{{/if}}
+    {{else}}
+        <h3>No TODOs</h3>
+    {{/if}}
 </div>
