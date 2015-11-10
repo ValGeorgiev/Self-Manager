@@ -1,13 +1,13 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-10">
-            <h1>Register</h1>
+        <div class="col-md-8">
+            <h1 class="header">Register</h1>
         </div>
-        <div class="col-md-1">
-            <a href="#/register">Register</a>
+        <div class="col-md-2">
+            <button class="logRegBut"><a href="#/register">Register</a></button>
         </div>
-        <div class="col-md-1">
-            <a href="#/login">Login </a>
+        <div class="col-md-2">         
+            <button class="logRegBut"><a href="#/login">Login </a></button>
         </div>
     </div>
 </div>
@@ -16,19 +16,19 @@
         <div class="col-sm-12">
 
             <div class="form-group">
-                <label for="tb-username">UserName: </label>
-                <input id="tb-username" class="form-control" type="text"/>
+                <label for="tb-username">Username: </label>
+                <input id="tb-username" class="form-control" type="text" placeholder="Username..."/>
             </div>
             <div class="form-group">
                 <label for="tb-pass">Password: </label>
-                <input id="tb-pass" class="form-control" type="password"/>
+                <input id="tb-pass" class="form-control" type="password" placeholder="Password..."/>
             </div>
             <div class="form-group">
-                <label for="tb-pass-check">Repeat Password: </label>
-                <input id="tb-pass-check" class="form-control" type="password"/>
+                <label for="tb-pass-check">Confirm Password: </label>
+                <input id="tb-pass-check" class="form-control" type="password" placeholder="Confirm password..."/>
             </div>
 
-            <button class="btn btn-success" id="btn-register" disabled>Register</button>
+            <button id="btn-register" disabled>Register</button>
 
         </div>
     </div>

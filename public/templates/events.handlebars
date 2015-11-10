@@ -1,42 +1,44 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <h2>Events</h2>
+        <div class="col-sm-12">
+            <h2 id="todos-header">Events</h2>
         </div>
     </div>
     <div class="row">
-
-        <nav class="navbar navbar-default">
-            <div class="col-md-11">
-                <ul class="nav navbar-nav">
-                    <li><a href="#/todos">My TODOs</a></li>
-                    <li><a href="#/events">My Events</a></li>
-                </ul>
+        <div id="navbarTodo" class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-10">
+                    <button id="myTodo"><a href="#/todos">My TODOs</a></button>
+                    <button id="myEvents"><a href="#/events">My Events</a></button>
+                </div>
+                <div class="col-sm-2">
+                    <button id="logOut"><a href="#/login">Log Out</a></button>
+                </div>
             </div>
-
-            <div class="col-md-1">
-                <a id="logOut" href="#/login">Log Out</a>
-            </div>
-        </nav>
-
+        </div>
     </div>
 </div>
-<a href="#/events/add">Add new Event</a>
 <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <button id="addEvent"><a href="#/events/add">Add</a></button>
+        </div>
+    </div>
+
 
 {{#if this }}
     {{#each this}}
-        <h3><a href="#/events?category={{category}}" class="event-category">{{category}}</a></h3>
+        <h3 class="eventCat"><a href="#/events?category={{category}}" class="event-category">{{category}}</a></h3>
             {{#each events}}
-            <div class="row">
+            <div class="row event">
                 <div class="col-sm-2">
-                    <h4 class="event-title" data-id="{{id}}"> {{title}} </h4>
+                    <p class="event-title" data-id="{{id}}"> {{title}} </p>
                 </div>
                 <div class="col-sm-6">
                     <p class="event-description" data-id="{{id}}"> {{description}}</p>
                 </div>
                 <div class="col-sm-4">
-                    <span class="event-date" data-id="{{id}}"> {{date}} </span>
+                    <p class="event-date" data-id="{{id}}"> {{date}} </p>
                 </div>
             </div>
             {{/each}}

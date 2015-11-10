@@ -1,0 +1,17 @@
+﻿#btn-todo-add{
+    font-size: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#addTodoHeader{
+    background-color: #BDD684;
+    font-size: 35px;
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid black;
+}
+#buttonAddTodo{
+    font-size: 20px;
+}

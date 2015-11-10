@@ -1,0 +1,36 @@
+﻿.logRegBut{
+    margin-top: 10px;
+    font-size: 26px;
+    padding: 7px;
+}
+
+.form-group{
+    background-color: #BDD684;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+label{
+    margin: 5px;
+    font-size: 22px;
+}
+.header{
+        background-color: #BDD684;
+        font-size: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        border-radius: 5px;
+        display: inline-block;
+}
+
+#btn-login #btn-register{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+#areyou{
+    background-color: #E2F0D6;
+}
